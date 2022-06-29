@@ -2,10 +2,10 @@
 
 pragma solidity 0.8.14;
 
-import "./iWallet.sol";
-
-contract Wallet is iWallet
+contract Wallet
 {
+    event EtherExtracted(address indexed from, address indexed to, uint256 amount, uint256 timestamp);
+
     address private _owner;
 
     constructor()
